@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="agC-sf-yXD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ytN-aO-g5P">
+            <objects>
+                <viewController id="agC-sf-yXD" customClass="ViewController" customModule="SwimmerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRg-WN-kz1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eby-YJ-i8v">
+                                <rect key="frame" x="20" y="295" width="374" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acz-rj-8bq">
+                                <rect key="frame" x="20" y="574" width="374" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3803921569" green="0.070588235289999995" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UDN-uR-01c">
+                                <rect key="frame" x="0.0" y="84" width="414" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="agC-sf-yXD" id="uUh-Am-mvx"/>
+                                    <outlet property="delegate" destination="agC-sf-yXD" id="857-YN-DCN"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-rm-qtR">
+                                <rect key="frame" x="172.5" y="845" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ONF-sc-tsf"/>
+                                    <constraint firstAttribute="width" constant="69" id="ej0-iW-c68"/>
+                                </constraints>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopAnimation:" destination="agC-sf-yXD" eventType="touchUpInside" id="B7n-sM-OKK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kb7-4k-4EK">
+                                <rect key="frame" x="172.5" y="44" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="M6z-Yk-gQv"/>
+                                    <constraint firstAttribute="width" constant="69" id="rGS-wp-f79"/>
+                                </constraints>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="btnStart:" destination="agC-sf-yXD" eventType="touchUpInside" id="Jfu-MX-fHJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Mf2-wM-X3X" firstAttribute="trailing" secondItem="UDN-uR-01c" secondAttribute="trailing" id="6w0-Lj-aDe"/>
+                            <constraint firstItem="6fu-rm-qtR" firstAttribute="top" secondItem="UDN-uR-01c" secondAttribute="bottom" constant="45" id="EF8-Ri-6E7"/>
+                            <constraint firstItem="kb7-4k-4EK" firstAttribute="centerX" secondItem="LRg-WN-kz1" secondAttribute="centerX" id="TVm-qs-8f9"/>
+                            <constraint firstItem="6fu-rm-qtR" firstAttribute="centerX" secondItem="LRg-WN-kz1" secondAttribute="centerX" id="ZvX-QI-wr6"/>
+                            <constraint firstItem="UDN-uR-01c" firstAttribute="leading" secondItem="Mf2-wM-X3X" secondAttribute="leading" id="bq9-Mx-dyJ"/>
+                            <constraint firstItem="kb7-4k-4EK" firstAttribute="top" secondItem="Mf2-wM-X3X" secondAttribute="top" id="f8M-SR-hDi"/>
+                            <constraint firstAttribute="bottom" secondItem="6fu-rm-qtR" secondAttribute="bottom" constant="21" id="ukS-fX-eaQ"/>
+                            <constraint firstItem="UDN-uR-01c" firstAttribute="top" secondItem="kb7-4k-4EK" secondAttribute="bottom" constant="10" id="wh2-pV-H0w"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mf2-wM-X3X"/>
+                    </view>
+                    <connections>
+                        <outlet property="swimmerLabel" destination="acz-rj-8bq" id="uop-dK-2eA"/>
+                        <outlet property="swimmerView" destination="eby-YJ-i8v" id="7q4-Jk-OuL"/>
+                        <outlet property="tableview" destination="UDN-uR-01c" id="Wy1-pK-Hej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpO-C3-S1L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="121.875"/>
+        </scene>
+    </scenes>
+</document>
